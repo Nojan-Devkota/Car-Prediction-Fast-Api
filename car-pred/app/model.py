@@ -3,7 +3,7 @@ import pandas as pd
 # pyrefly: ignore [missing-import]
 import joblib
 
-CAR_PRICE_API_DIR = Path(__file__).resolve().parent
+CAR_PRICE_API_DIR = Path(__file__).resolve().parent.parent
 MODEL_PATH = CAR_PRICE_API_DIR / "random_forest_model.pkl"
 COLS_PATH = CAR_PRICE_API_DIR / "feature_columns.pkl"
 print(COLS_PATH)
@@ -24,6 +24,20 @@ def preprocess(payload: dict) -> pd.DataFrame:
     Converts raw input into the SAME one-hot encoded column structure used in training.
     """
     df = pd.DataFrame([payload])
+
+    # Rename incoming API fields to match the TitleCase columns the model was trained on
+    rename_map = {
+        "car_name": "Car_Name",
+        "year": "Year",
+        "selling_price": "Selling_Price",
+        "present_price": "Present_Price",
+        "kms_driven": "Kms_Driven",
+        "fuel_type": "Fuel_Type",
+        "seller_type": "Seller_Type",
+        "transmission": "Transmission",
+        "owner": "Owner",
+    }
+    df = df.rename(columns=rename_map)
 
     categorical_cols = ["Fuel_Type", "Seller_Type", "Transmission", "Owner", "Car_Name"]
     df_encoded = pd.get_dummies(df, columns=categorical_cols, drop_first=True)
