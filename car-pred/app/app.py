@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = "https://car-prediction-fast-api.onrender.com/predict"  # "http://127.0.0.1:8000/predict"
 
 # ----------------- UI Config -----------------
 st.set_page_config(page_title="AutoEstimate AI", page_icon="🏎️", layout="centered")
