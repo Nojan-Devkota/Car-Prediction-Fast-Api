@@ -10,6 +10,8 @@ __pycache__/
 
 # Models and Data
 *.pkl
+!car-pred/random_forest_model.pkl
+!car-pred/feature_columns.pkl
 *.csv
 
 # IDEs
