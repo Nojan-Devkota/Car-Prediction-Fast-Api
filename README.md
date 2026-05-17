@@ -85,8 +85,11 @@ python -m streamlit run app.py
 
 ## ⚙️ API Documentation
 
-Once your FastAPI backend is running, you can access the automatically generated interactive documentation by navigating to:
+If you are running the backend locally, you can access the interactive documentation at:
 👉 **[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)**
+
+You can also test the live production API documentation here:
+👉 **[https://car-prediction-fast-api.onrender.com/docs](https://car-prediction-fast-api.onrender.com/docs)**
 
 ### Endpoint: `/predict`
 - **Method:** `POST`
