@@ -29,7 +29,6 @@ def preprocess(payload: dict) -> pd.DataFrame:
     rename_map = {
         "car_name": "Car_Name",
         "year": "Year",
-        "selling_price": "Selling_Price",
         "present_price": "Present_Price",
         "kms_driven": "Kms_Driven",
         "fuel_type": "Fuel_Type",
