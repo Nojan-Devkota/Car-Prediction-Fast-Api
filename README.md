@@ -1,5 +1,8 @@
 # AutoEstimate AI 🏎️
 
+🌍 **Live Frontend Demo:** [https://car-prediction-fast-api.streamlit.app/](https://car-prediction-fast-api.streamlit.app/)
+⚙️ **Live API Endpoint:** [https://car-prediction-fast-api.onrender.com/predict](https://car-prediction-fast-api.onrender.com/predict)
+
 AutoEstimate AI is an intelligent web application and API that predicts the market selling price of used cars based on historical data.
 
 The project is broken down into two main components:
