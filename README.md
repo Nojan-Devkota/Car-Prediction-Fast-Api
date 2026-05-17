@@ -18,6 +18,7 @@ Car Prediction Fast Api/
 │   ├── train.py                    # Script used to train the Random Forest model
 │   ├── random_forest_model.pkl     # Serialized machine learning model
 │   ├── feature_columns.pkl         # Serialized training feature columns (for one-hot encoding alignment)
+│   ├── requirements.txt            # Python package dependencies
 │   │
 │   └── app/                        # Main Application Code
 │       ├── main.py                 # FastAPI application and endpoint routing
@@ -25,7 +26,6 @@ Car Prediction Fast Api/
 │       ├── schema.py               # Pydantic data validation and schemas
 │       └── app.py                  # Streamlit frontend UI
 │
-├── requirements.txt                # Python package dependencies
 └── venv/                           # Virtual Environment
 ```
 
