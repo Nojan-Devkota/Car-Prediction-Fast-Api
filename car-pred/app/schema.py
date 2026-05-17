@@ -24,9 +24,6 @@ class CarFeatures(BaseModel):
         str, Field(min_length=1, description="Name of the car", examples=["swift"])
     ]
     year: Annotated[int, Field(description="Year of the car", examples=[2014])]
-    selling_price: Annotated[
-        float, Field(gt=0, description="Selling price of the car", examples=[5.5])
-    ]
     present_price: Annotated[
         float, Field(gt=0, description="Present price of the car", examples=[6.5])
     ]
